@@ -1,3 +1,3 @@
-### Visual Intelligence AI Chat
+# Visual Intelligence AI Chat
 
-## Created by Norsang Nyandak
+### Created by Norsang Nyandak
