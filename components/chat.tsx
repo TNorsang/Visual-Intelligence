@@ -18,10 +18,10 @@ export default function Chat() {
     ref.current.scrollTo(0, ref.current.scrollHeight);
   }, [messages]);
   return (
-    <section className="relative border text-sinc-700 h-screen w-screen flex justify-center items-center">
-      <div className="relative h-screen w-1/2 flex flex-col items-center justify-center">
+    <section className="relative text-sinc-700 h-screen w-screen flex justify-center items-center">
+      <div className="relative h-screen w-1/2 flex flex-col justify-center left-10">
         <div
-          className="relative border h-1/2 w-1/2 border-pink-500 bg-blue-200 rounded-md overflow-auto"
+          className="relative h-3/4 w-3/4 bg-blue-200 rounded-md overflow-auto"
           ref={ref}
         >
           {error && <div className="text-sm">{error.message}</div>}
@@ -44,10 +44,10 @@ export default function Chat() {
 
         <form
           onSubmit={handleSubmit}
-          className="relative overflow-y-auto w-1/2"
+          className="relative overflow-y-auto w-3/4"
         >
           <textarea
-            className="p-2 mb-8 rounded shadow-xl resize-none"
+            className="p-2 mt-2 rounded shadow-xl resize-none"
             value={input}
             placeholder="Ask your question here..."
             onChange={handleInputChange}
@@ -55,7 +55,6 @@ export default function Chat() {
             style={{
               width: "100%",
               paddingRight: "10%",
-              boxSizing: "border-box",
             }}
           >
             <Button
@@ -69,10 +68,11 @@ export default function Chat() {
         </form>
       </div>
       <Image
+        className="relative right-3"
         src="/images/pupil-distortion.png"
         alt="pupilImage"
-        width={300}
-        height={300}
+        width={500}
+        height={500}
       />
     </section>
   );
