@@ -5,8 +5,8 @@ import Button from "./ui/button";
 import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { useChat } from "ai/react";
-import LogoSVG from "@/public/logo";
-import JustLogo from "@/public/justLogo";
+import LogoSVG from "@/components/ui/logo";
+import JustLogo from "@/components/ui/justLogo";
 
 export default function Chat() {
   const ref = useRef<HTMLDivElement>(null);
