@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import Button from "./ui/button";
 import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
@@ -13,6 +13,12 @@ export default function Chat() {
 
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
     useChat();
+
+  const handleSubmitCallback = useCallback(() => {
+    if (handleSubmit) {
+      handleSubmit();
+    }
+  }, [handleSubmit]);
 
   useEffect(() => {
     if (ref.current === null) return;
@@ -47,20 +53,32 @@ export default function Chat() {
           onSubmit={handleSubmit}
           className="relative overflow-y-auto w-3/4"
         >
-          <textarea
-            className="p-2 mt-2 rounded shadow-xl resize-none"
-            value={input}
-            placeholder="Ask your question here..."
-            onChange={handleInputChange}
-            rows={2}
-            style={{
-              width: "100%",
-              paddingRight: "10%",
-            }}
-          />
-          <Button className="relative" type="submit" disabled={isLoading}>
-            <ChatBubbleLeftRightIcon className="text-blue-500 h-6 w-6" />
-          </Button>
+          <div className="relative">
+            <textarea
+              className="p-2 mt-2 rounded shadow-xl resize-none"
+              value={input}
+              placeholder="Type here to learn more about Visual Intelligence..."
+              onChange={handleInputChange}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSubmit;
+                }
+              }}
+              rows={2}
+              style={{
+                width: "100%",
+                paddingRight: "10%",
+              }}
+            />
+            <Button
+              className="absolute top-1/2 right-2 transform -translate-y-1/2"
+              type="submit"
+              disabled={isLoading}
+            >
+              <ChatBubbleLeftRightIcon className="text-blue-500 h-6 w-6" />
+            </Button>
+          </div>
         </form>
       </div>
       <Link
