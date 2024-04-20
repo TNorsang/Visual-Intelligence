@@ -29,49 +29,39 @@ export default function Chat() {
     <section className="relative text-sinc-700 h-screen w-screen flex justify-center items-center">
       <div className="relative h-screen w-1/2 flex flex-col justify-center left-10">
         <div
-          className="relative h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto"
+          className="relative h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto p-2"
           ref={ref}
         >
           {error && <div className="text-sm">{error.message}</div>}
           {messages.map((m, index) => (
             <div key={index} className="whitespace-pre-wrap p-2">
               {m.role === "user" ? (
-                <span className="flex items-start justify-end items-center">
-                  <span className="text-white border border-blue-500 bg-blue-500">
+                <div className="flex justify-end items-center">
+                  <span className="text-white p-2 pl-3 pr-3 border border-blue-500 bg-blue-500 rounded-md">
                     {m.content}
                   </span>
-                  <UserIcon className="min-w-6 h-6 w-6 flex relative" />
-                </span>
+                  <UserIcon className="min-w-6 h-6 w-6 ml-1 flex relative" />
+                </div>
               ) : (
-                <span className="flex items-start">
-                  <JustLogo className="min-w-6 h-6 w-6" />
-                  <span className="text-yellow-500"> {m.content} </span>
-                </span>
+                <div className="flex items-start">
+                  <JustLogo className="min-w-6 h-6 w-6 mr-1" />
+                  <span className="text-white p-3 pl-5 border bg-red-800 rounded-lg">
+                    {m.content}
+                  </span>
+                </div>
               )}
             </div>
           ))}
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="relative overflow-y-auto w-3/4"
-        >
+        <form onSubmit={handleSubmit} className="relative w-3/4 mt-2">
           <div className="relative">
             <textarea
-              className="p-2 mt-2 rounded shadow-xl resize-none"
+              className="p-2 rounded shadow-xl resize-none w-full"
               value={input}
               placeholder="Type here to learn more about Visual Intelligence..."
               onChange={handleInputChange}
-              //   onKeyDown={(e) => {
-              //     if (e.key === "Enter" && !e.shiftKey) {
-              //       e.preventDefault();
-              //     }
-              //   }}
               rows={2}
-              style={{
-                width: "100%",
-                paddingRight: "10%",
-              }}
             />
             <Button
               className="absolute top-1/2 right-2 transform -translate-y-1/2"
