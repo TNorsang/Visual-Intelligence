@@ -14,11 +14,12 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
     useChat();
 
-  const handleSubmitCallback = useCallback(() => {
-    if (handleSubmit) {
-      handleSubmit();
-    }
-  }, [handleSubmit]);
+  //   const handleSubmitCallback = useCallback(() => {
+  //     if (handleSubmit) {
+  //       console.log("Hello!!");
+  //       handleSubmit;
+  //     }
+  //   }, [handleSubmit]);
 
   useEffect(() => {
     if (ref.current === null) return;
@@ -62,7 +63,6 @@ export default function Chat() {
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) {
                   e.preventDefault();
-                  handleSubmit;
                 }
               }}
               rows={2}
@@ -91,11 +91,11 @@ export default function Chat() {
           className="hover:opacity-75"
         >
           <Image
-            className="relative right-3"
+            className="max-w-full max-h-full object-contain relative right-3"
             src="/images/pupil-distortion.png"
             alt="pupilImage"
-            width={500}
-            height={500}
+            width={200}
+            height={200}
           />
         </a>
       </Link>
