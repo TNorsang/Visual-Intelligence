@@ -6,7 +6,7 @@ import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { useChat } from "ai/react";
-import Link from "next/link";
+import LogoSVG from "../public/logo";
 
 export default function Chat() {
   const ref = useRef<HTMLDivElement>(null);
@@ -60,11 +60,11 @@ export default function Chat() {
               value={input}
               placeholder="Type here to learn more about Visual Intelligence..."
               onChange={handleInputChange}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.shiftKey) {
-                  e.preventDefault();
-                }
-              }}
+              //   onKeyDown={(e) => {
+              //     if (e.key === "Enter" && !e.shiftKey) {
+              //       e.preventDefault();
+              //     }
+              //   }}
               rows={2}
               style={{
                 width: "100%",
@@ -81,24 +81,8 @@ export default function Chat() {
           </div>
         </form>
       </div>
-      <Link
-        href="https://apps.apple.com/us/app/opto-screen/id1495864206"
-        legacyBehavior
-      >
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:opacity-75"
-        >
-          <Image
-            className="max-w-full max-h-full object-contain relative right-3"
-            src="/images/pupil-distortion.png"
-            alt="pupilImage"
-            width={200}
-            height={200}
-          />
-        </a>
-      </Link>
+
+      <LogoSVG />
     </section>
   );
 }
