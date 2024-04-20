@@ -6,6 +6,7 @@ import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { useChat } from "ai/react";
+import Link from "next/link";
 
 export default function Chat() {
   const ref = useRef<HTMLDivElement>(null);
@@ -62,13 +63,24 @@ export default function Chat() {
           </Button>
         </form>
       </div>
-      <Image
-        className="relative right-3"
-        src="/images/pupil-distortion.png"
-        alt="pupilImage"
-        width={500}
-        height={500}
-      />
+      <Link
+        href="https://apps.apple.com/us/app/opto-screen/id1495864206"
+        legacyBehavior
+      >
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-75"
+        >
+          <Image
+            className="relative right-3"
+            src="/images/pupil-distortion.png"
+            alt="pupilImage"
+            width={500}
+            height={500}
+          />
+        </a>
+      </Link>
     </section>
   );
 }
