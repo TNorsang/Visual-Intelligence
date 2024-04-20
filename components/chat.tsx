@@ -36,9 +36,11 @@ export default function Chat() {
           {messages.map((m, index) => (
             <div key={index} className="whitespace-pre-wrap p-2">
               {m.role === "user" ? (
-                <span className="flex items-start">
-                  <UserIcon className="min-w-6 h-6 w-6" />
-                  <span className="text-blue-400"> {m.content} </span>
+                <span className="flex items-start justify-end items-center">
+                  <span className="text-white border border-blue-500 bg-blue-500">
+                    {m.content}
+                  </span>
+                  <UserIcon className="min-w-6 h-6 w-6 flex relative" />
                 </span>
               ) : (
                 <span className="flex items-start">
