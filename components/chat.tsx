@@ -7,6 +7,7 @@ import Image from "next/image";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { useChat } from "ai/react";
 import LogoSVG from "../public/logo";
+import JustLogo from "../public/justLogo";
 
 export default function Chat() {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,7 +30,7 @@ export default function Chat() {
     <section className="relative text-sinc-700 h-screen w-screen flex justify-center items-center">
       <div className="relative h-screen w-1/2 flex flex-col justify-center left-10">
         <div
-          className="relative h-3/4 w-3/4 bg-blue-200 rounded-md overflow-auto"
+          className="relative h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto"
           ref={ref}
         >
           {error && <div className="text-sm">{error.message}</div>}
@@ -38,11 +39,11 @@ export default function Chat() {
               {m.role === "user" ? (
                 <span className="flex items-start">
                   <UserIcon className="min-w-6 h-6 w-6" />
-                  (You) <span className="text-blue-400"> {m.content} </span>
+                  <span className="text-blue-400"> {m.content} </span>
                 </span>
               ) : (
                 <span className="flex items-start">
-                  (Visual Intelligence)
+                  <JustLogo className="min-w-6 h-6 w-6" />
                   <span className="text-yellow-500"> {m.content} </span>
                 </span>
               )}
