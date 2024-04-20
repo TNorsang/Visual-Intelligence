@@ -21,7 +21,7 @@ export default function Chat() {
     <section className="relative border text-sinc-700 h-screen w-screen flex justify-center items-center">
       <div className="relative h-screen w-1/2 flex flex-col items-center justify-center">
         <div
-          className="relative border h-1/2 w-1/2 border-pink-500 bg-blue-200 rounded=md"
+          className="relative border h-1/2 w-1/2 border-pink-500 bg-blue-200 rounded-md overflow-auto"
           ref={ref}
         >
           {error && <div className="text-sm">{error.message}</div>}
@@ -44,10 +44,10 @@ export default function Chat() {
 
         <form
           onSubmit={handleSubmit}
-          className="overflow-y-auto border border-blue-500"
+          className="relative overflow-y-auto w-1/2"
         >
           <textarea
-            className="border border-white-500 w-1/3"
+            className="p-2 mb-8 rounded shadow-xl resize-none"
             value={input}
             placeholder="Ask your question here..."
             onChange={handleInputChange}
@@ -57,14 +57,15 @@ export default function Chat() {
               paddingRight: "10%",
               boxSizing: "border-box",
             }}
-          ></textarea>
-          <Button
-            className="absolute right-2"
-            type="submit"
-            disabled={isLoading}
           >
-            <ChatBubbleLeftRightIcon className="text-blue-500 h-6 w-6" />
-          </Button>
+            <Button
+              className="absolute right-2"
+              type="submit"
+              disabled={isLoading}
+            >
+              <ChatBubbleLeftRightIcon className="text-blue-500 h-6 w-6" />
+            </Button>
+          </textarea>
         </form>
       </div>
       <Image
