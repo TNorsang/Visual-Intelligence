@@ -56,15 +56,10 @@ export default function Chat() {
               width: "100%",
               paddingRight: "10%",
             }}
-          >
-            <Button
-              className="absolute right-2"
-              type="submit"
-              disabled={isLoading}
-            >
-              <ChatBubbleLeftRightIcon className="text-blue-500 h-6 w-6" />
-            </Button>
-          </textarea>
+          />
+          <Button className="relative" type="submit" disabled={isLoading}>
+            <ChatBubbleLeftRightIcon className="text-blue-500 h-6 w-6" />
+          </Button>
         </form>
       </div>
       <Image
