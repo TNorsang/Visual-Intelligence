@@ -31,9 +31,6 @@ export async function POST(req: Request) {
             stream: true,
             messages: [{role: "system", content: introductionMessage + dataMessage + restrictionsMessage + appMessage + lengthMessage + edgeCaseMessage + instructionAppMessage}, ...messagesTruncated]
         })
-
-        console.log(response.messages)
-
         const stream = OpenAIStream(response)
         return new StreamingTextResponse(stream)
     } catch (error:any){
