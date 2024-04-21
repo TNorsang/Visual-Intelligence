@@ -1,10 +1,16 @@
 .bottom-component{
   left:7%;
 }
+.chat{
+  width:100%;
+}
 
 @media (max-width: 1270px) {
     .bottom-component{
         left: 10%;
+    }
+    .chat{
+      width:100%;
     }
     
   }
@@ -12,7 +18,9 @@
 @media (max-width: 1130px) {
     .container {
         flex-direction: column;
-        width: 80%;
+      }
+      .chat{
+        width:100%;
       }
     .bottom-component{
         position: relative;
@@ -21,14 +29,33 @@
         order: -1; 
         top: 3%;
     }
+  }
+  @media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+      right:9%;
+      width:100%;
+    }
+    .chat{
+      width:100%;
+    }
+    .bottom-component {
+        position: relative;
+        width:55%;
+        left: 7%;
+        order: -1; 
+      }
     
   }
 
   @media (max-width: 500px) {
     .container {
       flex-direction: column;
-      right:34%;
-      width:150%;
+      right:9%;
+      width:100%;
+    }
+    .chat{
+      width:100%;
     }
     .bottom-component {
         position: relative;

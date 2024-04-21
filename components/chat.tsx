@@ -28,7 +28,7 @@ export default function Chat() {
   }, [messages]);
   return (
     <section className="container relative text-sinc-700 h-screen w-screen flex justify-center items-center flex flex-row ">
-      <div className="relative h-screen w-3/4 flex flex-col items-center justify-center left-10">
+      <div className="chat relative h-screen w-3/4 flex flex-col items-center justify-center left-10">
         <div
           className="relative border-4 border-red-700 h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto p-2"
           ref={ref}
