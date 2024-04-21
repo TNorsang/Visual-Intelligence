@@ -1,3 +1,7 @@
+.bottom-component{
+  left:7%;
+}
+
 @media (max-width: 1270px) {
     .bottom-component{
         left: 10%;
