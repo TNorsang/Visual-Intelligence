@@ -1,0 +1,36 @@
+@media (max-width: 1270px) {
+    .bottom-component{
+        left: 10%;
+    }
+    
+  }
+
+@media (max-width: 1130px) {
+    .container {
+        flex-direction: column;
+        width: 80%;
+      }
+    .bottom-component{
+        position: relative;
+        width:60%;
+        left: 5%;
+        order: -1; 
+        top: 3%;
+    }
+    
+  }
+
+  @media (max-width: 500px) {
+    .container {
+      flex-direction: column;
+      right:34%;
+      width:150%;
+    }
+    .bottom-component {
+        position: relative;
+        width:55%;
+        left: 7%;
+        order: -1; 
+      }
+    
+  }
