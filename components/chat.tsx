@@ -74,7 +74,7 @@ export default function Chat() {
           </div>
         </form>
       </div>
-      <div className="bottom-component relative border w-md flex justify-center">
+      <div className="bottom-component relative w-md flex justify-center">
         <LogoSVG />
       </div>
     </section>
