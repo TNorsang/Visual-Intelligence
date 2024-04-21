@@ -30,6 +30,21 @@
         top: 3%;
     }
   }
+  @media (max-width: 1021px) {
+    .container {
+        flex-direction: column;
+      }
+      .chat{
+        width:100%;
+      }
+    .bottom-component{
+        position: relative;
+        width:60%;
+        left: 5%;
+        order: -1; 
+        top: 3%;
+    }
+  }
   @media (max-width: 800px) {
     .container {
       flex-direction: column;
@@ -48,7 +63,7 @@
     
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 430px) {
     .container {
       flex-direction: column;
       right:9%;
@@ -63,5 +78,4 @@
         left: 7%;
         order: -1; 
       }
-    
   }

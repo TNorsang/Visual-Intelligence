@@ -35,7 +35,7 @@ export default function Chat() {
         >
           {error && <div className="text-sm">{error.message}</div>}
           {messages.map((m, index) => (
-            <div key={index} className="whitespace-pre-wrap p-2">
+            <div className="whitespace-pre-wrap p-2">
               {m.role === "user" ? (
                 <div className="flex justify-end items-center">
                   <span className="text-white p-2 pl-3 pr-3 border border-blue-500 bg-blue-500 rounded-md">
@@ -44,8 +44,8 @@ export default function Chat() {
                   <UserIcon className="min-w-6 h-6 w-6 ml-1 flex relative" />
                 </div>
               ) : (
-                <div className="flex items-start">
-                  <JustLogo className="min-w-6 h-6 w-6 mr-1" />
+                <div className="flex items-center justify-start">
+                  <JustLogo className="min-w-6 h-6 w-6 mr-1 flex" />
                   <span className="text-white p-3 pl-5 border bg-red-800 rounded-lg">
                     {m.content}
                   </span>
