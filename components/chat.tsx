@@ -7,6 +7,7 @@ import { UserIcon } from "@heroicons/react/24/outline";
 import { useChat } from "ai/react";
 import LogoSVG from "./ui/logo";
 import JustLogo from "./ui/justLogo";
+import "../styles/Chat.css";
 
 export default function Chat() {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,8 +27,8 @@ export default function Chat() {
     ref.current.scrollTo(0, ref.current.scrollHeight);
   }, [messages]);
   return (
-    <section className="relative text-sinc-700 h-screen w-screen flex justify-center items-center">
-      <div className="relative h-screen w-1/2 flex flex-col justify-center left-10">
+    <section className="container relative text-sinc-700 h-screen w-screen flex justify-center items-center flex flex-row ">
+      <div className="relative h-screen w-3/4 flex flex-col items-center justify-center left-10">
         <div
           className="relative h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto p-2"
           ref={ref}
@@ -73,8 +74,9 @@ export default function Chat() {
           </div>
         </form>
       </div>
-
-      <LogoSVG />
+      <div className="bottom-component relative border w-md flex justify-center">
+        <LogoSVG />
+      </div>
     </section>
   );
 }
