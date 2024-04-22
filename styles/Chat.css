@@ -5,17 +5,17 @@
     width: 100%;
   }
   .img {
-    width: 21%;
+    width: 23%;
   }
   .book {
     position: relative;
     top: 20%;
-    right: 80%;
+    right: 70%;
   }
   .app {
     position: relative;
-    top: 20%;
-    right: 30%;
+    top: 32%;
+    left: 50%;
   }
 }
 
