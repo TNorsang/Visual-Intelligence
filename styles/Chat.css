@@ -26,13 +26,13 @@
   .book {
     position: absolute;
     top: 40%;
-    left: -12%;
+    left: -10%;
     width: 15%; /* Adjust the width as needed */
   }
   .app {
     position: absolute;
     top: 40%;
-    right: -15%;
+    right: -13%;
     width: 25%;
   }
 }

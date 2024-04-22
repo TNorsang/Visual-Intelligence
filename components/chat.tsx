@@ -78,7 +78,7 @@ export default function Chat() {
         <div className="img flex flex-row">
           <a href="https://store.bookbaby.com/book/how-to-prevent-mass-shooting">
             <Image
-              className="book"
+              className="book opacity-100 hover:opacity-50"
               src="/book.png"
               alt="Book Image"
               width={500}
@@ -87,7 +87,7 @@ export default function Chat() {
           </a>
           <a href="https://apps.apple.com/us/app/opto-screen/id1495864206">
             <Image
-              className="app"
+              className="app opacity-100 hover:opacity-50"
               src="/app.png"
               alt="App Image"
               width={500}
