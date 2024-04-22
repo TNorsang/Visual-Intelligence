@@ -28,7 +28,7 @@ export default function Chat() {
     ref.current.scrollTo(0, ref.current.scrollHeight);
   }, [messages]);
   return (
-    <div className="main bg-black flex flex-row relative h-screen w-screen justify-center items-center border">
+    <div className="main bg-black flex flex-row relative h-screen w-screen justify-center items-center">
       <div className="chatFrame relative h-screen w-9/12 flex flex-col items-center justify-center">
         <Logo className="m-5 w-10/12" />
         <div
@@ -76,20 +76,24 @@ export default function Chat() {
           </div>
         </form>
         <div className="img flex flex-row">
-          <Image
-            className="book"
-            src="/book.png"
-            alt="Book Image"
-            width={500}
-            height={500}
-          />
-          <Image
-            className="app"
-            src="/app.png"
-            alt="App Image"
-            width={500}
-            height={500}
-          />
+          <a href="https://store.bookbaby.com/book/how-to-prevent-mass-shooting">
+            <Image
+              className="book"
+              src="/book.png"
+              alt="Book Image"
+              width={500}
+              height={500}
+            />
+          </a>
+          <a href="https://apps.apple.com/us/app/opto-screen/id1495864206">
+            <Image
+              className="app"
+              src="/app.png"
+              alt="App Image"
+              width={500}
+              height={500}
+            />
+          </a>
         </div>
       </div>
     </div>
