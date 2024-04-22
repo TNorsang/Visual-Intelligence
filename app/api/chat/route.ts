@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     const restrictionsMessage =
       "These are the rules: Do not ever talk about anything else other than the company related which is the book and what the company is about. Any other prompts related to other topics should respond with Sorry I do not have that information. Ask me anything related to Visual Intelligence please.";
     const appAndBookMessage =
-      "They can click the App and Book next to the chat box to download. The app is available both in iPhone and Android.";
+      "Make sure to mention if they ask where to get the book or app that they can click the App and Book next to the chat box to download. The app is available both in iPhone and Android.";
     const edgeCaseMessage =
       "If the prompt is Hi, How are you, anything related to these thigns you may answer that.";
     const lengthMessage =
