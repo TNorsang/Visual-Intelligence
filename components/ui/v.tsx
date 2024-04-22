@@ -1,4 +1,4 @@
-export default function JustLogo({ className }: { className: string }) {
+export default function JustLogo({className} : {className:string}) {
   return (
     <svg
       className={className}

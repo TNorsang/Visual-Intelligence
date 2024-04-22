@@ -5,9 +5,10 @@ import Button from "./ui/button";
 import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { useChat } from "ai/react";
-import LogoSVG from "./ui/logo";
-import JustLogo from "./ui/justLogo";
+import Logo from "./ui/logo";
+import V from "./ui/v";
 import "../styles/Chat.css";
+import Image from "next/image";
 
 export default function Chat() {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,10 +28,11 @@ export default function Chat() {
     ref.current.scrollTo(0, ref.current.scrollHeight);
   }, [messages]);
   return (
-    <section className="container relative text-sinc-700 h-screen w-screen flex justify-center items-center flex flex-row ">
-      <div className="chat relative h-screen w-3/4 flex flex-col items-center justify-center left-10">
+    <div className="main bg-black flex flex-row relative h-screen w-screen justify-center items-center border">
+      <div className="chatFrame relative h-screen w-9/12 flex flex-col items-center justify-center">
+        <Logo className="m-5 w-10/12" />
         <div
-          className="relative border-4 border-red-700 h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto p-2"
+          className="viewBox relative border-4 border-red-700 h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto p-2"
           ref={ref}
         >
           {error && <div className="text-sm">{error.message}</div>}
@@ -45,7 +47,7 @@ export default function Chat() {
                 </div>
               ) : (
                 <div className="flex items-center justify-start">
-                  <JustLogo className="min-w-6 h-6 w-6 mr-1 flex" />
+                  <V className="min-w-6 h-6 w-6 mr-1 flex" />
                   <span className="text-white p-3 pl-5 border bg-red-800 rounded-lg">
                     {m.content}
                   </span>
@@ -73,10 +75,23 @@ export default function Chat() {
             </Button>
           </div>
         </form>
+        <div className="img flex flex-row">
+          <Image
+            className="book"
+            src="/book.png"
+            alt="Book Image"
+            width={500}
+            height={500}
+          />
+          <Image
+            className="app"
+            src="/app.png"
+            alt="App Image"
+            width={500}
+            height={500}
+          />
+        </div>
       </div>
-      <div className="bottom-component relative w-md flex justify-center">
-        <LogoSVG />
-      </div>
-    </section>
+    </div>
   );
 }

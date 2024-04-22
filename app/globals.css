@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+/* :root {
   --foreground-rgb: 0, 0, 0; 
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
@@ -14,4 +15,4 @@
     --background-start-rgb: 255, 255, 255;
     --background-end-rgb: 255, 255, 255;
   }
-}
+} */
