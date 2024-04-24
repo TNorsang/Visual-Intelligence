@@ -16,13 +16,6 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
     useChat();
 
-  //   const handleSubmitCallback = useCallback(() => {
-  //     if (handleSubmit) {
-  //       console.log("Hello!!");
-  //       handleSubmit;
-  //     }
-  //   }, [handleSubmit]);
-
   useEffect(() => {
     if (ref.current === null) return;
     ref.current.scrollTo(0, ref.current.scrollHeight);
@@ -32,7 +25,7 @@ export default function Chat() {
       <div className="chatFrame relative h-screen w-9/12 flex flex-col items-center justify-center">
         <Logo className="m-5 w-10/12" />
         <div
-          className="viewBox relative border-4 border-red-700 h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto p-2"
+          className="viewBox relative border-4 border-red-700 h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto "
           ref={ref}
         >
           {error && <div className="text-sm">{error.message}</div>}
