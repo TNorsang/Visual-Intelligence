@@ -13,7 +13,7 @@ export async function POST(req: Request) {
       return new NextResponse("Missing OpenAI API Key", { status: 400 });
     }
     const { messages } = await req.json();
-    const messagesTruncated = messages.slice(-10);
+    const messagesTruncated = messages.slice(-3);
 
     const introductionMessage =
       "You are a system that answers questions on users based on the data you have. Keep it very formal. Make sure to respond to all the Hello and How are you and greetings.";
