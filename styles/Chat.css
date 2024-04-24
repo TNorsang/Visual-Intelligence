@@ -1,81 +1,38 @@
-.bottom-component{
-  left:7%;
+@media screen and (max-width: 700px) {
+  .chatFrame {
+    top: -2%;
+    height: 90%;
+    width: 100%;
+  }
+  .img {
+    width: 23%;
+  }
+  .book {
+    position: relative;
+    top: 20%;
+    right: 70%;
+  }
+  .app {
+    position: relative;
+    top: 32%;
+    left: 50%;
+  }
 }
-.chat{
-  width:100%;
+
+@media screen and (min-width: 701px) {
+  .chatFrame {
+    position: relative;
+  }
+  .book {
+    position: absolute;
+    top: 40%;
+    left: -10%;
+    width: 15%; /* Adjust the width as needed */
+  }
+  .app {
+    position: absolute;
+    top: 40%;
+    right: -13%;
+    width: 25%;
+  }
 }
-
-@media (max-width: 1270px) {
-    .bottom-component{
-        left: 10%;
-    }
-    .chat{
-      width:100%;
-    }
-    
-  }
-
-@media (max-width: 1130px) {
-    .container {
-        flex-direction: column;
-      }
-      .chat{
-        width:100%;
-      }
-    .bottom-component{
-        position: relative;
-        width:60%;
-        left: 5%;
-        order: -1; 
-        top: 3%;
-    }
-  }
-  @media (max-width: 1021px) {
-    .container {
-        flex-direction: column;
-      }
-      .chat{
-        width:100%;
-      }
-    .bottom-component{
-        position: relative;
-        width:60%;
-        left: 5%;
-        order: -1; 
-        top: 3%;
-    }
-  }
-  @media (max-width: 800px) {
-    .container {
-      flex-direction: column;
-      right:9%;
-      width:100%;
-    }
-    .chat{
-      width:100%;
-    }
-    .bottom-component {
-        position: relative;
-        width:55%;
-        left: 7%;
-        order: -1; 
-      }
-    
-  }
-
-  @media (max-width: 430px) {
-    .container {
-      flex-direction: column;
-      right:9%;
-      width:100%;
-    }
-    .chat{
-      width:100%;
-    }
-    .bottom-component {
-        position: relative;
-        width:55%;
-        left: 7%;
-        order: -1; 
-      }
-  }
