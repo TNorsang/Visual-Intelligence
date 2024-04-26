@@ -23,7 +23,9 @@ export default function Chat() {
   return (
     <div className="main bg-black flex flex-row relative h-screen w-screen justify-center items-center">
       <div className="chatFrame relative h-screen w-9/12 flex flex-col items-center justify-center">
-        <Logo className="m-5 w-10/12" />
+        <a href="https://visualintelligence.us/" target="_blank">
+          <Logo className="m-5 w-10/12" />
+        </a>
         <div
           className="viewBox relative border-4 border-red-700 h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto "
           ref={ref}
@@ -70,7 +72,7 @@ export default function Chat() {
         </form>
         <div className="img flex flex-row">
           <a
-            href="https://store.bookbaby.com/book/how-to-prevent-mass-shooting"
+            href="https://visualintelligence.us/product/how-to-prevent-mass-killing/"
             target="_blank"
           >
             <Image
