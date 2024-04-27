@@ -88,7 +88,7 @@ export default function Chat() {
             target="_blank"
           >
             <Image
-              className="app opacity-100 hover:opacity-50"
+              className="app opacity-100 hover:opacity-50 relative left-[90%]"
               src="/app.png"
               alt="App Image"
               width={500}
