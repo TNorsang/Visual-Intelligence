@@ -21,13 +21,13 @@ export default function Chat() {
     ref.current.scrollTo(0, ref.current.scrollHeight);
   }, [messages]);
   return (
-    <div className="main bg-gradient-to-l from-black to-gray-900 flex flex-row relative h-screen w-screen justify-center items-center">
+    <div className="main bg-gradient-to-l from-black via-gray-900 to-red-900 flex flex-row relative h-screen w-screen justify-center items-center">
       <div className="chatFrame relative h-screen w-9/12 flex flex-col items-center justify-center">
         <a href="https://visualintelligence.us/" target="_blank">
           <Logo className="m-5 w-10/12" />
         </a>
         <div
-          className="viewBox relative border-4 border-red-700 h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto "
+          className="bg-opacity-50 viewBox relative border-4 border-white h-3/4 w-3/4 bg-gray-200 rounded-md overflow-auto "
           ref={ref}
         >
           {error && <div className="text-sm">{error.message}</div>}
@@ -43,7 +43,7 @@ export default function Chat() {
               ) : (
                 <div className="flex items-center justify-start">
                   <V className="min-w-6 h-6 w-6 mr-1 flex" />
-                  <span className="text-white p-3 pl-5 border bg-red-800 rounded-lg">
+                  <span className="text-white p-3 pl-5 border bg-red-800 border-red-800 rounded-lg">
                     {m.content}
                   </span>
                 </div>
