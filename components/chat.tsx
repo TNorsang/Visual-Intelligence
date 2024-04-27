@@ -21,7 +21,7 @@ export default function Chat() {
     ref.current.scrollTo(0, ref.current.scrollHeight);
   }, [messages]);
   return (
-    <div className="main bg-black flex flex-row relative h-screen w-screen justify-center items-center">
+    <div className="main bg-gradient-to-l from-black to-gray-900 flex flex-row relative h-screen w-screen justify-center items-center">
       <div className="chatFrame relative h-screen w-9/12 flex flex-col items-center justify-center">
         <a href="https://visualintelligence.us/" target="_blank">
           <Logo className="m-5 w-10/12" />
